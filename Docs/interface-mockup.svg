@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="title desc">
+  <title id="title">QuadTable wavetable synth interface mockup</title>
+  <desc id="desc">A dark themed concept interface for a four oscillator wavetable synthesizer with oscillator panels, envelopes, filters, modulation matrix and macro controls.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10131d"/>
+      <stop offset="0.55" stop-color="#171b28"/>
+      <stop offset="1" stop-color="#090b11"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#252b3b"/>
+      <stop offset="1" stop-color="#171c28"/>
+    </linearGradient>
+    <linearGradient id="display" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c111b"/>
+      <stop offset="1" stop-color="#141b29"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#55e6ff"/>
+      <stop offset="0.5" stop-color="#9b7cff"/>
+      <stop offset="1" stop-color="#ff65c8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { font: 700 38px 'Inter', 'Segoe UI', Arial, sans-serif; fill: #f7f9ff; letter-spacing: 1px; }
+      .subtitle { font: 500 14px 'Inter', 'Segoe UI', Arial, sans-serif; fill: #8d98b7; letter-spacing: 3px; }
+      .label { font: 700 14px 'Inter', 'Segoe UI', Arial, sans-serif; fill: #dce5ff; letter-spacing: 1.4px; }
+      .small { font: 500 11px 'Inter', 'Segoe UI', Arial, sans-serif; fill: #9ca8c9; }
+      .tiny { font: 600 9px 'Inter', 'Segoe UI', Arial, sans-serif; fill: #7f8aa8; letter-spacing: 0.7px; }
+      .value { font: 700 12px 'Inter', 'Segoe UI', Arial, sans-serif; fill: #f7f9ff; }
+      .panel { fill: url(#panel); stroke: #31384d; stroke-width: 1.2; filter: url(#shadow); }
+      .subpanel { fill: #111722; stroke: #273049; stroke-width: 1; }
+      .knob { fill: #111722; stroke: #3a4561; stroke-width: 5; }
+      .knobMark { stroke: #56e4ff; stroke-width: 4; stroke-linecap: round; }
+      .grid { stroke: #263049; stroke-width: 1; opacity: 0.8; }
+      .wave { fill: none; stroke: url(#accent); stroke-width: 3; stroke-linecap: round; }
+      .env { fill: none; stroke: #58e6ff; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .matrixLine { stroke: #33405c; stroke-width: 1; }
+      .chip { fill: #151b28; stroke: #323c57; stroke-width: 1; }
+      .chipText { font: 700 10px 'Inter', 'Segoe UI', Arial, sans-serif; fill: #cbd6f6; letter-spacing: 0.5px; }
+    </style>
+  </defs>
+
+  <rect width="1440" height="960" rx="36" fill="url(#bg)"/>
+  <rect x="38" y="34" width="1364" height="892" rx="30" fill="#0d1018" stroke="#293149" stroke-width="2"/>
+
+  <g transform="translate(74 64)">
+    <text class="title" x="0" y="38">QuadTable</text>
+    <text class="subtitle" x="0" y="65">4 OSC WAVETABLE MATRIX SYNTH</text>
+    <rect x="360" y="2" width="360" height="52" rx="14" fill="#151b28" stroke="#303a55"/>
+    <text class="small" x="384" y="34">Preset</text>
+    <text class="value" x="462" y="34">INIT: Four Tables</text>
+    <rect x="744" y="2" width="108" height="52" rx="14" class="chip"/>
+    <text class="chipText" x="775" y="34">POLY 16</text>
+    <rect x="866" y="2" width="112" height="52" rx="14" class="chip"/>
+    <text class="chipText" x="898" y="34">MIDI IN</text>
+    <rect x="994" y="2" width="236" height="52" rx="14" fill="#151b28" stroke="#303a55"/>
+    <text class="small" x="1018" y="34">Output</text>
+    <rect x="1090" y="24" width="112" height="7" rx="4" fill="#2a344d"/>
+    <rect x="1090" y="24" width="74" height="7" rx="4" fill="url(#accent)"/>
+  </g>
+
+  <g transform="translate(74 156)">
+    <g id="osc1">
+      <rect class="panel" x="0" y="0" width="305" height="300" rx="22"/>
+      <text class="label" x="24" y="35">OSC 1</text>
+      <text class="small" x="214" y="35">Basic</text>
+      <rect class="subpanel" x="24" y="54" width="257" height="82" rx="14" fill="url(#display)"/>
+      <path class="grid" d="M24 95H281 M67 54V136 M110 54V136 M153 54V136 M196 54V136 M239 54V136"/>
+      <path class="wave" d="M35 96 C55 62 75 62 95 96 S135 130 155 96 S195 62 215 96 S255 130 275 96"/>
+      <g transform="translate(35 170)">
+        <circle class="knob" cx="26" cy="26" r="24"/><path class="knobMark" d="M26 26 L41 12"/><text class="tiny" x="5" y="66">LEVEL</text>
+        <circle class="knob" cx="91" cy="26" r="24"/><path class="knobMark" d="M91 26 L102 7"/><text class="tiny" x="77" y="66">PAN</text>
+        <circle class="knob" cx="156" cy="26" r="24"/><path class="knobMark" d="M156 26 L156 4"/><text class="tiny" x="140" y="66">TUNE</text>
+        <circle class="knob" cx="221" cy="26" r="24"/><path class="knobMark" d="M221 26 L238 18"/><text class="tiny" x="196" y="66">WT POS</text>
+      </g>
+      <rect x="24" y="256" width="257" height="12" rx="6" fill="#273149"/><rect x="24" y="256" width="54" height="12" rx="6" fill="#55e6ff"/>
+    </g>
+
+    <g transform="translate(325 0)">
+      <rect class="panel" x="0" y="0" width="305" height="300" rx="22"/>
+      <text class="label" x="24" y="35">OSC 2</text><text class="small" x="210" y="35">Vocal</text>
+      <rect class="subpanel" x="24" y="54" width="257" height="82" rx="14" fill="url(#display)"/>
+      <path class="grid" d="M24 95H281 M67 54V136 M110 54V136 M153 54V136 M196 54V136 M239 54V136"/>
+      <path class="wave" d="M35 111 C55 72 73 72 88 111 C101 142 117 142 132 93 C150 48 170 48 188 93 C204 142 224 142 239 111 C251 88 263 88 275 111"/>
+      <g transform="translate(35 170)">
+        <circle class="knob" cx="26" cy="26" r="24"/><path class="knobMark" d="M26 26 L36 7"/><text class="tiny" x="5" y="66">LEVEL</text>
+        <circle class="knob" cx="91" cy="26" r="24"/><path class="knobMark" d="M91 26 L76 12"/><text class="tiny" x="77" y="66">PAN</text>
+        <circle class="knob" cx="156" cy="26" r="24"/><path class="knobMark" d="M156 26 L170 9"/><text class="tiny" x="140" y="66">TUNE</text>
+        <circle class="knob" cx="221" cy="26" r="24"/><path class="knobMark" d="M221 26 L216 4"/><text class="tiny" x="196" y="66">WT POS</text>
+      </g>
+      <rect x="24" y="256" width="257" height="12" rx="6" fill="#273149"/><rect x="24" y="256" width="140" height="12" rx="6" fill="#9b7cff"/>
+    </g>
+
+    <g transform="translate(650 0)">
+      <rect class="panel" x="0" y="0" width="305" height="300" rx="22"/>
+      <text class="label" x="24" y="35">OSC 3</text><text class="small" x="204" y="35">Metal</text>
+      <rect class="subpanel" x="24" y="54" width="257" height="82" rx="14" fill="url(#display)"/>
+      <path class="grid" d="M24 95H281 M67 54V136 M110 54V136 M153 54V136 M196 54V136 M239 54V136"/>
+      <path class="wave" d="M35 128 L58 62 L82 128 L105 62 L128 128 L152 62 L176 128 L199 62 L222 128 L246 62 L275 128"/>
+      <g transform="translate(35 170)">
+        <circle class="knob" cx="26" cy="26" r="24"/><path class="knobMark" d="M26 26 L30 4"/><text class="tiny" x="5" y="66">LEVEL</text>
+        <circle class="knob" cx="91" cy="26" r="24"/><path class="knobMark" d="M91 26 L108 18"/><text class="tiny" x="77" y="66">PAN</text>
+        <circle class="knob" cx="156" cy="26" r="24"/><path class="knobMark" d="M156 26 L140 11"/><text class="tiny" x="140" y="66">TUNE</text>
+        <circle class="knob" cx="221" cy="26" r="24"/><path class="knobMark" d="M221 26 L241 24"/><text class="tiny" x="196" y="66">WT POS</text>
+      </g>
+      <rect x="24" y="256" width="257" height="12" rx="6" fill="#273149"/><rect x="24" y="256" width="202" height="12" rx="6" fill="#ff65c8"/>
+    </g>
+
+    <g transform="translate(975 0)">
+      <rect class="panel" x="0" y="0" width="305" height="300" rx="22"/>
+      <text class="label" x="24" y="35">OSC 4</text><text class="small" x="204" y="35">Noise</text>
+      <rect class="subpanel" x="24" y="54" width="257" height="82" rx="14" fill="url(#display)"/>
+      <path class="grid" d="M24 95H281 M67 54V136 M110 54V136 M153 54V136 M196 54V136 M239 54V136"/>
+      <path class="wave" d="M35 101 L49 73 L63 122 L77 65 L92 118 L108 88 L124 131 L138 58 L153 116 L169 82 L184 136 L201 64 L218 103 L233 78 L249 127 L275 86"/>
+      <g transform="translate(35 170)">
+        <circle class="knob" cx="26" cy="26" r="24"/><path class="knobMark" d="M26 26 L16 8"/><text class="tiny" x="5" y="66">LEVEL</text>
+        <circle class="knob" cx="91" cy="26" r="24"/><path class="knobMark" d="M91 26 L91 4"/><text class="tiny" x="77" y="66">PAN</text>
+        <circle class="knob" cx="156" cy="26" r="24"/><path class="knobMark" d="M156 26 L174 14"/><text class="tiny" x="140" y="66">TUNE</text>
+        <circle class="knob" cx="221" cy="26" r="24"/><path class="knobMark" d="M221 26 L204 12"/><text class="tiny" x="196" y="66">WT POS</text>
+      </g>
+      <rect x="24" y="256" width="257" height="12" rx="6" fill="#273149"/><rect x="24" y="256" width="104" height="12" rx="6" fill="#55e6ff"/>
+    </g>
+  </g>
+
+  <g transform="translate(74 492)">
+    <rect class="panel" x="0" y="0" width="405" height="190" rx="22"/>
+    <text class="label" x="24" y="36">FILTER A</text>
+    <text class="small" x="310" y="36">LP 24</text>
+    <g transform="translate(28 66)">
+      <circle class="knob" cx="38" cy="38" r="34"/><path class="knobMark" d="M38 38 L66 24"/><text class="tiny" x="17" y="92">CUTOFF</text>
+      <circle class="knob" cx="132" cy="38" r="34"/><path class="knobMark" d="M132 38 L127 5"/><text class="tiny" x="105" y="92">RESONANCE</text>
+      <circle class="knob" cx="226" cy="38" r="34"/><path class="knobMark" d="M226 38 L245 12"/><text class="tiny" x="205" y="92">DRIVE</text>
+      <circle class="knob" cx="320" cy="38" r="34"/><path class="knobMark" d="M320 38 L292 24"/><text class="tiny" x="296" y="92">ENV AMT</text>
+    </g>
+  </g>
+
+  <g transform="translate(505 492)">
+    <rect class="panel" x="0" y="0" width="385" height="190" rx="22"/>
+    <text class="label" x="24" y="36">AMP ENV</text>
+    <rect class="subpanel" x="24" y="58" width="337" height="92" rx="14"/>
+    <path class="grid" d="M24 104H361 M80 58V150 M136 58V150 M192 58V150 M248 58V150 M304 58V150"/>
+    <path class="env" d="M42 136 L95 72 L154 104 L246 104 L334 136"/>
+    <text class="tiny" x="38" y="174">ATTACK</text><text class="tiny" x="122" y="174">DECAY</text><text class="tiny" x="204" y="174">SUSTAIN</text><text class="tiny" x="296" y="174">RELEASE</text>
+  </g>
+
+  <g transform="translate(916 492)">
+    <rect class="panel" x="0" y="0" width="438" height="190" rx="22"/>
+    <text class="label" x="24" y="36">VECTOR MIX</text>
+    <rect class="subpanel" x="30" y="58" width="136" height="106" rx="14"/>
+    <line class="matrixLine" x1="98" y1="66" x2="98" y2="156"/><line class="matrixLine" x1="38" y1="111" x2="158" y2="111"/>
+    <circle cx="124" cy="86" r="12" fill="url(#accent)"/>
+    <text class="tiny" x="44" y="82">OSC1</text><text class="tiny" x="124" y="82">OSC2</text><text class="tiny" x="44" y="148">OSC3</text><text class="tiny" x="124" y="148">OSC4</text>
+    <g transform="translate(205 66)">
+      <circle class="knob" cx="32" cy="32" r="29"/><path class="knobMark" d="M32 32 L56 20"/><text class="tiny" x="25" y="82">X</text>
+      <circle class="knob" cx="112" cy="32" r="29"/><path class="knobMark" d="M112 32 L106 5"/><text class="tiny" x="105" y="82">Y</text>
+      <circle class="knob" cx="192" cy="32" r="29"/><path class="knobMark" d="M192 32 L170 15"/><text class="tiny" x="169" y="82">SMOOTH</text>
+    </g>
+  </g>
+
+  <g transform="translate(74 720)">
+    <rect class="panel" x="0" y="0" width="850" height="158" rx="22"/>
+    <text class="label" x="24" y="36">MOD MATRIX</text>
+    <g transform="translate(24 56)">
+      <text class="tiny" x="0" y="0">SOURCE</text><text class="tiny" x="178" y="0">AMOUNT</text><text class="tiny" x="310" y="0">DESTINATION</text><text class="tiny" x="604" y="0">VIA</text>
+      <g transform="translate(0 18)">
+        <rect class="chip" x="0" y="0" width="148" height="26" rx="8"/><text class="chipText" x="16" y="18">LFO 1</text><rect class="chip" x="172" y="0" width="92" height="26" rx="8"/><text class="chipText" x="198" y="18">+35%</text><rect class="chip" x="296" y="0" width="260" height="26" rx="8"/><text class="chipText" x="318" y="18">OSC 1 WT POSITION</text><rect class="chip" x="586" y="0" width="150" height="26" rx="8"/><text class="chipText" x="610" y="18">MOD WHEEL</text>
+        <rect class="chip" x="0" y="36" width="148" height="26" rx="8"/><text class="chipText" x="16" y="54">ENV 2</text><rect class="chip" x="172" y="36" width="92" height="26" rx="8"/><text class="chipText" x="198" y="54">+62%</text><rect class="chip" x="296" y="36" width="260" height="26" rx="8"/><text class="chipText" x="318" y="54">FILTER A CUTOFF</text><rect class="chip" x="586" y="36" width="150" height="26" rx="8"/><text class="chipText" x="610" y="54">NONE</text>
+        <rect class="chip" x="0" y="72" width="148" height="26" rx="8"/><text class="chipText" x="16" y="90">VELOCITY</text><rect class="chip" x="172" y="72" width="92" height="26" rx="8"/><text class="chipText" x="198" y="90">+20%</text><rect class="chip" x="296" y="72" width="260" height="26" rx="8"/><text class="chipText" x="318" y="90">AMP LEVEL</text><rect class="chip" x="586" y="72" width="150" height="26" rx="8"/><text class="chipText" x="610" y="90">NONE</text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(952 720)">
+    <rect class="panel" x="0" y="0" width="402" height="158" rx="22"/>
+    <text class="label" x="24" y="36">MACROS</text>
+    <g transform="translate(28 60)">
+      <circle class="knob" cx="28" cy="28" r="26"/><path class="knobMark" d="M28 28 L50 16"/><text class="tiny" x="9" y="70">BRIGHT</text>
+      <circle class="knob" cx="112" cy="28" r="26"/><path class="knobMark" d="M112 28 L112 3"/><text class="tiny" x="91" y="70">MOTION</text>
+      <circle class="knob" cx="196" cy="28" r="26"/><path class="knobMark" d="M196 28 L176 13"/><text class="tiny" x="181" y="70">WIDE</text>
+      <circle class="knob" cx="280" cy="28" r="26"/><path class="knobMark" d="M280 28 L300 13"/><text class="tiny" x="262" y="70">CHAOS</text>
+    </g>
+  </g>
+
+  <text x="74" y="912" class="small">Concept mockup only — current build uses JUCE GenericAudioProcessorEditor while this custom interface is the intended next UI direction.</text>
+</svg>

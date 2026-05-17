@@ -13,6 +13,10 @@ QuadTable is an early JUCE/C++ VST3 instrument prototype for a four-oscillator w
 - Initial modulation-matrix data model for adding flexible routing in later milestones.
 - Generic JUCE parameter editor for fast iteration.
 
+## Interface mockup
+
+A concept image for the planned custom synth interface is available at [`Docs/interface-mockup.svg`](Docs/interface-mockup.svg). It shows the intended four-oscillator layout, wavetable displays, filter/envelope section, vector mix, modulation matrix, and macros. The current compiled plugin still uses JUCE's generated generic parameter editor until the custom editor is implemented.
+
 ## Build
 
 ### Quick diagnosis
