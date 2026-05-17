@@ -1,6 +1,6 @@
 #pragma once
 
-#include <JuceHeader.h>
+#include "WavetableCore.h"
 
 class WavetableOscillator
 {
@@ -10,12 +10,5 @@ public:
     float renderSample (float frequencyHz, float wavetablePosition) noexcept;
 
 private:
-    static constexpr int tableSize = 2048;
-    static constexpr int tableCount = 4;
-
-    static const std::array<std::array<float, tableSize>, tableCount>& tables();
-    static float interpolateTable (const std::array<float, tableSize>& table, float phase) noexcept;
-
-    double sampleRate = 44100.0;
-    float phase = 0.0f;
+    quadtable::WavetableCore core;
 };
